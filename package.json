@@ -1,0 +1,24 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "run:electron": "electron .",
+    "run:dev": "parcel index.html",
+    "start": "concurrently --kill-others \"npm run run:*\"",
+    "rebuild": "electron-rebuild -f -w serialport",
+    "postinstall": "npm run rebuild"
+  },
+  "dependencies": {
+    "serialport": "^9.2.8",
+    "vue": "^3.2.29"
+  },
+  "devDependencies": {
+    "@parcel/transformer-vue": "^2.2.1",
+    "concurrently": "^7.0.0",
+    "electron": "^13.6.7",
+    "electron-is-dev": "^2.0.0",
+    "electron-rebuild": "^3.2.7",
+    "parcel": "^2.2.1"
+  }
+}
